@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: sara88/angular-app:${COMMIT_SHA}
+          image: sara88/angular-app:8c196ec7e788c621a69819c4833615ccbd09bf45
           ports:
             - containerPort: 80
 
