@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-app
-          image: docker-spring-boot-postgres:e8742577fbff855b3399ef205586260a047982b8
+          image: sara88/docker-spring-boot-postgres:${{ github.sha }}
           ports:
             - containerPort: 9090
           env:
@@ -26,6 +26,7 @@ spec:
               value: root
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
+            - COMMIT_SHA: ${{ github.sha }}
 ---
 
 
