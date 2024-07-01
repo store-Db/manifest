@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-app
-          image: docker-spring-boot-postgres:${{ github.sha }}
+          image: docker-spring-boot-postgres:e8742577fbff855b3399ef205586260a047982b8
           ports:
             - containerPort: 9090
           env:
