@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: angular-app:8c196ec7e788c621a69819c4833615ccbd09bf45
+          image: angular-app:${{ github.sha }}
           ports:
             - containerPort: 80
 
