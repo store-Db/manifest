@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dat-migration44-test
+  labels:
+    app: dat-migration44-test
+spec:
+  containers:
+  - image: postgres:15.2
+    imagePullPolicy: IfNotPresent
+    name: data-migration
+    env:  
+      - name: POSTGRES_PASSWORD
+        value: "j83Z2Kh6!j2c"  
+    resources:
+      requests:
+        memory: "8Gi"
