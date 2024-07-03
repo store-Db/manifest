@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: liquibase-prod-changelog
+data:
+  prod-db-changelog.yaml: |
+    databaseChangeLog:
+      - preConditions:
+          - runningAs:
+              username: liquibase
+      # No change sets defined for prod, keeping it empty
