@@ -14,7 +14,7 @@ spec:
     - --change-set-context=prod
     - --url=jdbc:postgresql://db:5432/postgres
     - --username=postgres
-    - --password=<your_prod_db_password>
+    - --password=root
     volumeMounts:
     - name: liquibase-volume
       mountPath: /liquibase
