@@ -14,7 +14,7 @@ spec:
     - --change-set-context=dev
     - --url=jdbc:postgresql://db:5432/postgres
     - --username=postgres
-    - --password=<your_dev_db_password>
+    - --password=root
     volumeMounts:
     - name: liquibase-volume
       mountPath: /liquibase
