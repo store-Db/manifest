@@ -17,7 +17,7 @@ spec:
         image: liquibase/liquibase:4.28.0
         command: ["liquibase", "update"]
         args:
-        - "--changeLogFile=/liquibase/prod-db-changelog.xml"
+        - "--changeLogFile=/liquibase/prod-db-changelog-configmap.yaml"
         - "--url=jdbc:postgresql://prod-postgres-service:5432/proddb"
         - "--username=postgres"
         - "--password=$(DB_PASSWORD)"
@@ -33,4 +33,4 @@ spec:
       volumes:
       - name: liquibase-changelog
         configMap:
-          name: prod-db-changelog
+          name: prod-db-changelog-configmap
