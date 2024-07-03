@@ -26,7 +26,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: dev-db-secret
-              key: root
+              key: password
         volumeMounts:
         - name: dev-db-persistent-storage
           mountPath: /var/lib/postgresql/data
