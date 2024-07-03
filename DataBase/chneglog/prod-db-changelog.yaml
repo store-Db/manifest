@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - preConditions:
+      - runningAs:
+          username: liquibase
+  # No change sets defined for prod, keeping it empty
