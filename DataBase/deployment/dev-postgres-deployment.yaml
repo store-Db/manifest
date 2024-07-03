@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-postgres
+  template:
+    metadata:
+      labels:
+        app: dev-postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: devdb
+        - name: POSTGRES_USER
+          value: postgres
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dev-db-secret
+              key: password
+        volumeMounts:
+        - name: dev-db-persistent-storage
+          mountPath: /var/lib/postgresql/data
+      volumes:
+      - name: dev-db-persistent-storage
+        persistentVolumeClaim:
+          claimName: dev-db-pvc
