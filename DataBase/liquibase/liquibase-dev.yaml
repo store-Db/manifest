@@ -17,7 +17,7 @@ spec:
         image: liquibase/liquibase:4.28.0
         command: ["liquibase", "update"]
         args:
-        - "--changeLogFile=/liquibase/dev-db-changelog.xml"
+        - "--changeLogFile=/liquibase/dev-db-changelog-configmap.yaml"
         - "--url=jdbc:postgresql://dev-postgres-service:5432/devdb"
         - "--username=postgres"
         - "--password=$(DB_PASSWORD)"
@@ -33,4 +33,4 @@ spec:
       volumes:
       - name: liquibase-changelog
         configMap:
-          name: dev-db-changelog
+          name: dev-db-changelog-configmap
