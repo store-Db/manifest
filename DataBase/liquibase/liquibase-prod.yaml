@@ -14,10 +14,9 @@ spec:
     spec:
       containers:
       - name: liquibase
-        image: liquibase/liquibase:latest
-        command: ["liquibase", "update", "--changeLogFile=/liquibase/changelog/changelog.xml"]
+        image: liquibase/liquibase:4.28.0
+        command: ["liquibase", "update"]
         args:
-        - "update"
         - "--changeLogFile=/liquibase/prod-db-changelog-configmap.yaml"
         - "--url=jdbc:postgresql://prod-postgres-service:5432/proddb"
         - "--username=postgres"
