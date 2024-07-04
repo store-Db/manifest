@@ -33,4 +33,4 @@ spec:
       volumes:
       - name: liquibase-changelog
         configMap:
-          name: prod-db-changelog-configmap
+          name: liquibase-prod-changelog
