@@ -5,6 +5,8 @@ metadata:
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
+  hostNetwork: false
+  port: 9080 
 spec:
   project: default
   source:
@@ -17,7 +19,6 @@ spec:
           service:
             type: LoadBalancer
             port: 9090 
-            hostNetwork: false 
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
