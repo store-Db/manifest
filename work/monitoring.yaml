@@ -6,7 +6,6 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   hostNetwork: false
-  port: 9080 
 spec:
   project: default
   source:
