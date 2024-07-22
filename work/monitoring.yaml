@@ -18,7 +18,7 @@ spec:
         server:
           service:
             type: LoadBalancer
-            port: 9090 
+            port: 9080 
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
