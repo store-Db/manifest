@@ -1,11 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rag
+  name: ragg
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
-  hostNetwork: false
 spec:
   project: default
   source:
@@ -17,7 +16,6 @@ spec:
         server:
           service:
             type: LoadBalancer
-            port: 9080 
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
