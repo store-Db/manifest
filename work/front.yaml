@@ -16,7 +16,7 @@ spec:
         - name: angular-app
           image: sara88/angular-app:5c62c70e75737d302696db1f3c100177c8ae8a02
           ports:
-            - containerPort: 4200
+            - containerPort: 80
 
 ---
 
@@ -30,6 +30,6 @@ spec:
     app: angular-app
   ports:
     - protocol: TCP
-      port: 4200
+      port: 80
       targetPort: 80
   type: NodePort
