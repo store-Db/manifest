@@ -16,7 +16,7 @@ spec:
         server:
           service:
             type: LoadBalancer
-        hostNetwork: false
+        hostNetwork: False
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
