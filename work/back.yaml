@@ -26,6 +26,7 @@ spec:
               value: root
             - name: SPRING_JPA_HIBERNATE_DDL_AUTO
               value: update
+              COMMIT_SHA: ${{ github.sha }}
               
 ---
 
@@ -73,6 +74,7 @@ spec:
               value: root
             - name: POSTGRES_DB
               value: test
+              COMMIT_SHA: ${{ github.sha }}
 
 --- 
 
