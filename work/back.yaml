@@ -74,7 +74,8 @@ spec:
               value: root
             - name: POSTGRES_DB
               value: test
-              COMMIT_SHA: ${{ github.sha }}
+            - name: COMMIT_SHA
+              value: ${{ github.sha }}
 
 --- 
 
