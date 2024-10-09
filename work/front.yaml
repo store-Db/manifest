@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: sara88/angular-app:86428b027d342d0e110bc6130b2b4f07d6a2fa63
+          image: sara88/angular-app:f556e6a69ef6e3d0134d88a6bc55e979958cc3ed
           ports:
             - containerPort: 4200
 
