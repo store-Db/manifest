@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: spring-boot-app
-          image: sara88/docker-spring-boot-postgres:687c9cb6fe9aa0fda49fc7637157ae6f6d306a9e
+          image: sara88/docker-spring-boot-postgres:424169d71d4a96e0b316226d13ceb3505c6aa6f8
           ports:
             - containerPort: 9090
           env:
@@ -64,7 +64,7 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:13
+          image: sara88/docker-spring-boot-postgres:424169d71d4a96e0b316226d13ceb3505c6aa6f8
           ports:
             - containerPort: 5432
           env:
